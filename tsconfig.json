@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+    "target": "ESNEXT",
+    "module": "ESNEXT",
+    "lib": ["dom", "esnext"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "baseUrl": "./",
+    "paths": {
+      "@fhdhsni/carousel": ["packages/carousel/lib"]
+    },
+    "esModuleInterop": true,
+    "experimentalDecorators": false,
+    "emitDecoratorMetadata": false
+  }
+}
