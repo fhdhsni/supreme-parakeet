@@ -4,8 +4,21 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "dev": "rollup --watch --config rollup.config.js"
+  },
   "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-transform-react-jsx": "^7.12.1",
+    "@babel/preset-typescript": "^7.12.1",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-replace": "^2.3.3",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
     "lerna": "^3.22.1",
+    "rollup": "^2.32.0",
     "typescript": "^4.1.0-beta"
   },
   "dependencies": {

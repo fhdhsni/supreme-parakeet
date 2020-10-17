@@ -4,13 +4,14 @@
     "target": "ESNEXT",
     "module": "ESNEXT",
     "lib": ["dom", "esnext"],
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "strict": true,
     "typeRoots": ["./node_modules/@types", "./types"],
     "baseUrl": "./",
     "paths": {
       "@fhdhsni/carousel": ["packages/carousel/lib"]
     },
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "experimentalDecorators": false,
     "emitDecoratorMetadata": false
