@@ -19,7 +19,5 @@ export default {
     }),
     resolve({ extensions }),
   ],
-  watch: {
-    buildDelay: 500,
-  },
+  watch: {},
 };

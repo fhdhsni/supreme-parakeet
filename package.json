@@ -5,7 +5,8 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "rollup --watch --config rollup.config.js"
+    "dev": "rollup --watch --config rollup.config.js",
+    "boot": "lerna bootstrap"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",

@@ -1,10 +1,12 @@
-import React from "react";
-import { Carausel } from "@fhdhsni/carousel";
+import { Carousel } from "@fhdhsni/carousel";
 
 export function App() {
+  const foo: string = "hi";
+
   return (
     <div>
-      <Carausel />
+      {foo}
+      <Carousel />
     </div>
   );
 }

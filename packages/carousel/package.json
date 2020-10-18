@@ -1,26 +1,18 @@
 {
   "name": "@fhdhsni/carousel",
-  "version": "0.0.0",
-  "description": "> TODO: description",
   "author": "Farhad Hasani <farhad.hsni@gmail.com>",
-  "homepage": "",
-  "license": "ISC",
-  "main": "lib/carousel.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+  "version": "0.0.1",
+  "description": "a tiny carousel",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fhdhsni/supreme-parakeet.git",
+    "directory": "packages/carousel"
   },
   "peerDependencies": {
     "react": "17.0.0-rc.3",
     "react-dom": "17.0.0-rc.3"
-  }
+  },
+  "module": "lib/index.js",
+  "main": "lib/index.js"
 }
