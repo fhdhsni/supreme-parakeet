@@ -11,9 +11,11 @@
     "paths": {
       "@fhdhsni/carousel": ["packages/carousel/lib"]
     },
+    "pretty": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "experimentalDecorators": false,
     "emitDecoratorMetadata": false
+    // "declaration": true,
   }
 }

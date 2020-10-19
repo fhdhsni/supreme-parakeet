@@ -1,3 +1,5 @@
+export let helloWorld = "hi";
+
 export function Carousel() {
-  return <div>jaoiiiiiiijjjjfar</div>;
+  return <div>Carousel</div>;
 }

@@ -1,23 +1,27 @@
 import resolve from "@rollup/plugin-node-resolve";
-import toCommonjs from "@rollup/plugin-commonjs";
+import commonJS_to_ES6 from "@rollup/plugin-commonjs";
 import replace from "@rollup/plugin-replace";
-import babel from "@rollup/plugin-babel";
+import typescript from "@rollup/plugin-typescript";
 
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
 
 export default {
-  input: "./index.tsx",
+  input: "./dev/index.tsx",
   output: {
-    file: "main.js",
-    format: "cjs",
+    dir: "dev/dist",
+    format: "es",
+    sourcemap: true,
   },
   plugins: [
-    babel({ babelHelpers: "bundled", extensions }),
-    toCommonjs(),
+    resolve({ extensions }),
+    commonJS_to_ES6(),
+    typescript({
+      jsx: "react-jsxdev", // "jsx": "react-jsx",
+      outDir: "./dev/dist",
+    }),
     replace({
       "process.env.NODE_ENV": JSON.stringify("dev"),
     }),
-    resolve({ extensions }),
   ],
   watch: {},
 };
