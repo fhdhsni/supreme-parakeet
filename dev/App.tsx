@@ -2,12 +2,19 @@ import { Carousel } from "@fhdhsni/carousel";
 import "@fhdhsni/css/lib/index.css";
 
 export function App() {
-  const foo: string = "hi";
+  const items = ["brown", "cyan", "darkgrey", "green", "lightcoral"];
 
   return (
     <div>
-      {foo}
-      <Carousel />
+      <Carousel>
+        {items.map((x) => {
+          return (
+            <div key={x} style={{ background: x, width: "150px", height: "100px" }}>
+              {x}
+            </div>
+          );
+        })}
+      </Carousel>
     </div>
   );
 }
