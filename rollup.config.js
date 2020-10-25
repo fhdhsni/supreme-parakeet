@@ -4,6 +4,7 @@ import replace from "@rollup/plugin-replace";
 import typescript from "@rollup/plugin-typescript";
 import html from "@rollup/plugin-html";
 import postcss from "rollup-plugin-postcss";
+import browsersync from 'rollup-plugin-browsersync'
 import { createHtmlTemplate } from "./build/html.js";
 
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
@@ -31,6 +32,7 @@ export default {
     html({
       template: createHtmlTemplate,
     }),
+    browsersync({server: './dev/dist'})
   ],
   watch: {},
 };

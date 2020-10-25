@@ -2,14 +2,14 @@ import { Carousel } from "@fhdhsni/carousel";
 import "@fhdhsni/css/lib/index.css";
 
 export function App() {
-  const items = ["brown", "cyan", "darkgrey", "green", "lightcoral"];
+  const items: number[] = Array.from({ length: 20 }, (_, idx) => idx);
 
   return (
     <div>
-      <Carousel>
+      <Carousel className="border">
         {items.map((x) => {
           return (
-            <div key={x} style={{ background: x, width: "150px", height: "100px" }}>
+            <div className="flex items-center justify-center flex-shrink-0 shadow h-64 w-64 m-1" key={x}>
               {x}
             </div>
           );

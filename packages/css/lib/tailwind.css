@@ -3,3 +3,19 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.f-scrollbar-hide::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    display: none;
+}
+
+.f-scrollbar-hide {             /* FF */
+    scrollbar-width: none;
+    scrollbar-color: transparent transparent;
+}
+
+
+.f-top-50 {
+    top: 50%
+}
