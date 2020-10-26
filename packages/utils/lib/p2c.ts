@@ -15,13 +15,17 @@ type Props = Partial<{
  * @param props - an object that acts as a predicate for choosing the classes from `classes`
  * @param className - the resulting className
  */
-export function p2c(
-  classes: Classes,
-  props: Props,
-  className = new Set<string>()
-): string {
-  className.add(props.className ?? "");
+export function p2c(classes: Classes, props: Props): string {
+  const className = new Set<string>();
 
+  if (isString(props.className)) {
+    className.add(props.className);
+  }
+
+  return doP2c(classes, props, className);
+}
+
+function doP2c(classes: Classes, props: Props, className: Set<string>) {
   for (const [variation, value] of Object.entries(classes)) {
     if (isString(value) && is(variation, "$all")) {
       className.add(value);
@@ -40,14 +44,16 @@ export function p2c(
       className.add(value(props));
       //
     } else if (isObject(value)) {
-      className.add(value.$all ?? "");
+      if (isString(value.$all)) {
+        className.add(value.$all);
+      }
 
       if (isString(value[propValueStr])) {
         className.add(value[propValueStr] as string);
         //
       } else if (isObject(value[propValueStr])) {
         const scopedClasses = value[propValueStr] as Classes;
-        p2c(scopedClasses, props, className);
+        doP2c(scopedClasses, props, className);
       }
     }
   }
