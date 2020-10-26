@@ -37,8 +37,7 @@ export function p2c(
       }
       //
     } else if (isFunction(value)) {
-      const returnedValue = value(props);
-      className.add(isString(returnedValue) ? returnedValue : "");
+      className.add(value(props));
       //
     } else if (isObject(value)) {
       className.add(value.$all ?? "");
