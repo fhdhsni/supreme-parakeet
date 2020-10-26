@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
-    "target": "ESNEXT",
-    "module": "ESNEXT",
+    "target": "ES2019",
+    "module": "esnext",
     "lib": ["dom", "esnext"],
-    "jsx": "preserve",
+    "jsx": "react-jsxdev" /* "preserve", */,
     "strict": true,
     "typeRoots": ["./node_modules/@types", "./types"],
     "baseUrl": "./",
