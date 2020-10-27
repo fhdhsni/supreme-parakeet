@@ -2,7 +2,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import { Carousel } from "@fhdhsni/carousel";
 
 export default {
-  title: "Example/Carousel",
+  title: "Components/Carousel",
   component: Carousel,
 } as Meta;
 
