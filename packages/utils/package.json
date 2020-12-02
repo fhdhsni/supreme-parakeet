@@ -25,5 +25,8 @@
   },
   "bugs": {
     "url": "https://github.com/fhdhsni/supreme-parakeet/issues"
+  },
+  "dependencies": {
+    "tailwindcss": "^2.0.1"
   }
 }

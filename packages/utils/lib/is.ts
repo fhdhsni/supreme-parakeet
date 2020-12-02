@@ -1,4 +1,4 @@
-import { not } from ".";
+import { not } from "./not";
 
 export function isObject(x: unknown): x is Object {
   return is(Object.prototype.toString.call(x), "[object Object]");

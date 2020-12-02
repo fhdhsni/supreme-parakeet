@@ -8,7 +8,7 @@ module.exports = {
     config.module.rules = [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader", "postcss-loader"],
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(ts|tsx)?$/,

@@ -14,5 +14,8 @@
     "react-dom": "^17.0.1"
   },
   "module": "lib/index.tsx",
-  "main": "lib/index.tsx"
+  "main": "lib/index.tsx",
+  "dependencies": {
+    "tailwindcss": "^2.0.1"
+  }
 }

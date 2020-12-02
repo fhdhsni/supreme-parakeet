@@ -3,8 +3,8 @@ import commonJS_to_ES6 from "@rollup/plugin-commonjs";
 import replace from "@rollup/plugin-replace";
 import typescript from "@rollup/plugin-typescript";
 import html from "@rollup/plugin-html";
-import postcss from "rollup-plugin-postcss";
-import browsersync from 'rollup-plugin-browsersync'
+import css from "rollup-plugin-css-only";
+import browsersync from "rollup-plugin-browsersync";
 import { createHtmlTemplate } from "./build/html.js";
 
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
@@ -26,13 +26,11 @@ export default {
     replace({
       "process.env.NODE_ENV": JSON.stringify("dev"),
     }),
-    postcss({
-      extract: true,
-    }),
+    css({ output: "index.css" }),
     html({
       template: createHtmlTemplate,
     }),
-    browsersync({server: './dev/dist'})
+    browsersync({ server: "./dev/dist" }),
   ],
   watch: {},
 };
